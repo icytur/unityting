@@ -5,7 +5,7 @@ public class PlayerController : MonoBehaviour
     // Movement Variables
     public CharacterController controller;
     public float stepDistance = 2f; // Distance to move on key press
-    public float stepSpeed = 10f;   // Speed of the step movement
+    public float stepSpeed = 10f;   
     public float gravity = -9.81f;
 
     private Vector3 velocity;
@@ -16,8 +16,8 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundMask;
 
     // Rotation Variables for "A" and "D"
-    public float rotationAmount = 90f; // Degrees to rotate on key press
-    private bool isRotating = false;   // To prevent continuous rotation on key hold
+    public float rotationAmount = 90f; 
+    private bool isRotating = false;   
     private Quaternion targetRotation; // Desired rotation
 
     private Vector3 targetPosition; // Target position for step movement
@@ -25,8 +25,8 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        targetRotation = transform.rotation; // Initialize the target rotation
-        targetPosition = transform.position; // Initialize the target position
+        targetRotation = transform.rotation; 
+        targetPosition = transform.position; 
     }
 
     void Update()
@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        // Move towards the target position
+        
         if (isMoving)
         {
             Vector3 moveDirection = (targetPosition - transform.position).normalized;
@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        // Apply Gravity
+        
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
 

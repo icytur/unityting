@@ -10,9 +10,9 @@ public class ChestInteraction : MonoBehaviour
 
     void Start()
     {
-        openUIPrompt.SetActive(false); // Hide the prompt initially
-        chestInventoryPanel.SetActive(false); // Hide the chest inventory initially
-        playerInventoryPanel.SetActive(false); // Hide the player inventory initially
+        openUIPrompt.SetActive(false); 
+        chestInventoryPanel.SetActive(false); 
+        playerInventoryPanel.SetActive(false); 
     }
 
     void Update()
