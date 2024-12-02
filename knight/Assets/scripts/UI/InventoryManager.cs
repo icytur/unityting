@@ -7,6 +7,8 @@ public class InventoryManager : MonoBehaviour
     public GameObject inventoryPanel; // Reference to the Inventory Panel
     private Animator animator;        // Animator for the Inventory Panel
     private bool isInventoryOpen = false; // Tracks if the inventory is open
+    
+    
 
     void Start()
     {
